@@ -1,5 +1,6 @@
 import { Logo } from "@/components/Shared/Logo/Logo";
 import Sidebar from "@/components/Shared/Sidebar/Sidebar";
+import SidebarMobile from "@/components/Shared/SidebarMobile/SidebarMobile";
 
 function LayoutRoutes({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -8,7 +9,7 @@ function LayoutRoutes({ children }: Readonly<{ children: React.ReactNode }>) {
         <div className="py-1 text-white">
           <Logo />
         </div>
-        <div>SidebarMobile</div>
+        <SidebarMobile/>
       </div>
       <div className="flex h-full">
         <div className="max-w-lg hidden lg:flex h-full w-72 flex-col bg-blue-950 px-4 text-white fixed">
