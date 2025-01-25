@@ -5,23 +5,20 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  BarChart,
-  DoorClosed,
-  House,
-  Icon,
-  RectangleEllipsis,
-} from "lucide-react";
+import { BarChart, DoorClosed, House, RectangleEllipsis } from "lucide-react";
 import Link from "next/link";
 import SingleItem from "../SingleItem/SingleItem";
 import {
   dataSidebarElements,
   dataSidebarConfiguration,
 } from "./SidebarRoutes.data";
-function SidebarRoutes() {
+
+
+export function SidebarRoutes() {
   return (
     <div>
       <SingleItem href="/" label="Homepage" icon={House} />
+
       {dataSidebarElements.map(({ title, icon: Icon, children }) => (
         <Accordion
           type="single"
@@ -43,7 +40,8 @@ function SidebarRoutes() {
                 <div key={item}>
                   <Link
                     href={href}
-                    className="px-6 py-2 flex gap-3 items-center hover:bg_blue-100/20 duration-300 transition-all rounded-md"
+                    className="px-6 py-2 flex gap-2 items-center 
+                    hover:bg-blue-100/20 duration-300 transition-all rounded-md"
                   >
                     <Icon size={20} />
                     {item}
@@ -54,11 +52,13 @@ function SidebarRoutes() {
           </AccordionItem>
         </Accordion>
       ))}
+
       <SingleItem
         href="/generator"
         label="Generator"
         icon={RectangleEllipsis}
       />
+
       {dataSidebarConfiguration.map(({ title, icon: Icon, children }) => (
         <Accordion
           type="single"
@@ -79,7 +79,8 @@ function SidebarRoutes() {
               {children.map(({ item, href, icon: Icon, premium }) => (
                 <div
                   key={item}
-                  className="flex items-center justify-between mt-2 hover:bg-blue-100/20 duration-300 transition-all rounded-md pr-1"
+                  className="flex items-center justify-between mt-2 
+                hover:bg-blue-100/20 duration-300 transition-all rounded-md pr-1"
                 >
                   <Link
                     href={href}
@@ -99,7 +100,9 @@ function SidebarRoutes() {
           </AccordionItem>
         </Accordion>
       ))}
-      <SingleItem href="/analytic" label="Analitics" icon={BarChart} />
+
+      <SingleItem href="/analytics" label="Analytics" icon={BarChart} />
+
       <SingleItem
         onClick={() => console.log("Cerrar sesión")}
         href="#"
@@ -109,5 +112,3 @@ function SidebarRoutes() {
     </div>
   );
 }
-
-export default SidebarRoutes;

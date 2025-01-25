@@ -1,6 +1,6 @@
 import { Logo } from "@/components/Shared/Logo/Logo";
 import Sidebar from "@/components/Shared/Sidebar/Sidebar";
-import SidebarMobile from "@/components/Shared/SidebarMobile/SidebarMobile";
+import { SidebarMobile } from "@/components/Shared/SidebarMobile";
 
 function LayoutRoutes({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

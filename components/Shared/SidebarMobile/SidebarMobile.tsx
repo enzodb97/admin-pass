@@ -1,3 +1,4 @@
+"use client";
 import {
   Sheet,
   SheetContent,
@@ -10,25 +11,23 @@ import { Menu } from "lucide-react";
 import { SidebarRoutes } from "../SidebarRoutes";
 import { Button } from "@/components/ui/button";
 
-function SidebarMobile() {
+export function SidebarMobile() {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button>
-          <Menu/>
+          <Menu />
         </Button>
-        </SheetTrigger>
-      <SheetContent>
-        <SheetHeader>
-          <SheetTitle>Are you absolutely sure?</SheetTitle>
-          <SheetDescription>
-            This action cannot be undone. This will permanently delete your
-            acoound and remove your data from our servers.
+      </SheetTrigger>
+      <SheetContent side="left" className="bg-blue-950 text-white">
+        <SheetHeader className="text-left mb-5">
+          <SheetTitle className="text-white">Save Pass</SheetTitle>
+          <SheetDescription className="text-slate-100">
+            Create and manage all of your password
           </SheetDescription>
         </SheetHeader>
+        <SidebarRoutes />
       </SheetContent>
     </Sheet>
   );
 }
-
-export default SidebarMobile;

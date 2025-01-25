@@ -32,29 +32,30 @@ export const dataSidebarElements = [
     ],
   },
 ];
-export const dataSidebarConfiguration=[
-    {
-      title: "Configuration",
-      icon: Settings,
-      children: [
-        {
-          item: "Profile",
-          href: "/profile",
-          icon: UserPen,
-          premium: false,
-        },
-        {
-          item: "Security",
-          href: "#",
-          icon: Lock,
-          premium: true,
-        },
-        {
-          item: "Suscription",
-          href: "#",
-          icon: Landmark,
-          premium: true,
-        },
-      ],
-    },
-  ];
+
+export const dataSidebarConfiguration = [
+  {
+    title: "Configuration",
+    icon: Settings,
+    children: [
+      {
+        item: "Profile",
+        href: "/profile",
+        icon: UserPen,
+        premium: false,
+      },
+      {
+        item: "Security",
+        href: "#",
+        icon: Lock,
+        premium: true,
+      },
+      {
+        item: "Suscription",
+        href: "#",
+        icon: Landmark,
+        premium: true,
+      },
+    ],
+  },
+];
